@@ -97,7 +97,16 @@ $("#searchBtn").on("click", function() {
       let results = response.list;
       console.log(results)
       
-      
+      //declare start date to check against
+      //have end date, endDate = startDate + 5
+  
+      for (let i = 0; i < results.length; i++) {
+  
+        let day = Number(results[i].dt_txt.split('-')[2].split(' ')[0]);
+        let hour = results[i].dt_txt.split('-')[2].split(' ')[1];
+        console.log(day);
+        console.log(hour);
+      }
     });
   
   }
