@@ -50,3 +50,8 @@ $("#searchBtn").on("click", function() {
   
       })
     });
+    
+  function makeList() {
+    let listItem = $("<li>").addClass("list-group-item").text(city);
+    $(".list").append(listItem);
+  }
