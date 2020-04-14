@@ -74,4 +74,10 @@ $("#searchBtn").on("click", function() {
     const wind = $("<p>").addClass("card-text current-wind").text("Wind Speed: " + response.wind.speed + " MPH");
     const image = $("<img>").attr("src", "https://openweathermap.org/img/w/" + response.weather[0].icon + ".png")
 
+    // add to page
+    city.append(cityDate, image)
+    cardBody.append(city, temperature, humidity, wind);
+    card.append(cardBody);
+    $("#currentCity").append(card)
+   
   }
