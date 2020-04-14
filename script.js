@@ -55,3 +55,13 @@ $("#searchBtn").on("click", function() {
     let listItem = $("<li>").addClass("list-group-item").text(city);
     $(".list").append(listItem);
   }
+
+  function getCurrentConditions (response) {
+
+    // get the temperature and convert to fahrenheit 
+    let tempF = (response.main.temp - 273.15) * 1.80 + 32;
+    tempF = Math.floor(tempF);
+
+    $('#currentCity').empty();
+
+  }
